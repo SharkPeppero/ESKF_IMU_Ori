@@ -1,0 +1,8 @@
+<launch>
+    <rosparam file="$(find imu_orientation_estimator)/config/param.yaml" command="load"/>
+
+    <node pkg="imu_orientation_estimator" type="main" name="main" output="screen"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find imu_orientation_estimator)/config/param.rviz"/>
+
+</launch>
